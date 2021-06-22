@@ -1,0 +1,12 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+}
+
+$layout-breakpoint-small: 800px;
+
+@media (min-width: $layout-breakpoint-small) {
+  .homepage {
+    margin: 10px 100px;
+  }
+}
