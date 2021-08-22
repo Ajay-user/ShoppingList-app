@@ -1,0 +1,41 @@
+@import "../../sass/sass_mixins/mixin";
+@import "../../sass/sass_variables/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  margin: 10px;
+
+  // logo
+
+  &__logo-container {
+    width: 7.5rem;
+    // media queries
+    @include respond(tab-port) {
+      width: 5rem;
+    }
+  }
+  &__logo {
+    height: 100%;
+    width: 100%;
+  }
+
+  // options
+  &__options {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__option {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    // media queries
+    @include respond(phone) {
+      font-size: 1rem;
+    }
+  }
+}

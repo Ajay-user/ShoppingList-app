@@ -1,0 +1,68 @@
+@import "../../sass/sass_mixins/mixin";
+@import "../../sass/sass_variables/variables";
+
+.collection-item {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 22%;
+  height: 35rem;
+  margin: 0.5rem;
+  position: relative;
+
+  &__background-image {
+    height: 95%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    @include respond(tab-port) {
+      height: 90%;
+    }
+  }
+  &__footer {
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    @include respond(tab-port) {
+      height: 10%;
+    }
+
+    span {
+      height: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1.6rem;
+      @include respond(tab-port) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__title {
+      width: 80%;
+    }
+
+    &__price {
+      width: 20%;
+    }
+  }
+}
+
+$layout-breakpoint-small: 800px;
+
+@media (max-width: $layout-breakpoint-small) {
+  .collection-item {
+    height: 350px;
+    width: 45%;
+  }
+}
+
+$layout-breakpoint-small: 300px;
+
+@media (max-width: $layout-breakpoint-small) {
+  .collection-item {
+    height: 350px;
+    width: 90%;
+  }
+}

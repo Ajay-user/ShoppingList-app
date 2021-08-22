@@ -1,0 +1,13 @@
+@import "../../sass/sass_mixins/mixin";
+@import "../../sass/sass_variables/variables";
+
+.sign-in-and-sign-up {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include respond(phone) {
+    margin: 4rem 2rem;
+    flex-direction: column;
+  }
+}

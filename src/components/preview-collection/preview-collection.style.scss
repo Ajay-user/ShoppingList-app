@@ -1,0 +1,25 @@
+@import "../../sass/sass_mixins/mixin";
+@import "../../sass/sass_variables/variables";
+
+.preview-collection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+
+  &__title {
+    margin: 1rem;
+    font-size: 3rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__preview {
+    display: flex;
+    justify-content: space-between;
+
+    // media query
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
+  }
+}
