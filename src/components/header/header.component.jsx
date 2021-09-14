@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
 //  import SVGs directly as React component.
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 // This is handy if you don't want to load SVG as a separate file.
@@ -36,4 +38,8 @@ const Header = ({ currentUser }) => (
   </div>
 );
 
-export default Header;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Header);
