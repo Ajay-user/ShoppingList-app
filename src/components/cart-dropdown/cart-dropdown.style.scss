@@ -1,0 +1,40 @@
+@import "../../sass/sass_mixins/mixin";
+
+.cart-dropdown {
+  width: 25rem;
+  height: 35rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 80px;
+  right: 15px;
+  background-color: white;
+  z-index: 50;
+
+  //   media query
+  @include respond(phone) {
+    width: 15rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow-y: scroll;
+  }
+
+  &__checkout-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
+}
+
+/* media query */
+@media screen and (min-width: 1200px) {
+  .cart-dropdown {
+    top: 8rem;
+    right: 4rem;
+  }
+}

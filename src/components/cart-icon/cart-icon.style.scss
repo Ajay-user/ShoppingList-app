@@ -1,0 +1,29 @@
+@import "../../sass/sass_mixins/mixin";
+
+.cart-icon {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  @include respond(phone) {
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  &__icon {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__span {
+    font-size: 1rem;
+    @include abscenter;
+    transform: translate(-50%, -26%);
+    user-select: none;
+  }
+}

@@ -18,12 +18,13 @@ a {
   box-sizing: border-box;
 }
 
+/* media query */
 @media screen and (min-width: 1200px) {
   body {
     padding: 2rem 4rem;
   }
 }
-
+/* media query */
 @media screen and (min-width: 1800px) {
   body {
     padding: 4rem 8rem;
