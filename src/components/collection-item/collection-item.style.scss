@@ -2,6 +2,7 @@
 @import "../../sass/sass_variables/variables";
 
 .collection-item {
+  cursor: pointer;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -10,6 +11,26 @@
   height: 35rem;
   margin: 0.5rem;
   position: relative;
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &__button {
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 5rem;
+    opacity: 0.8;
+  }
+
+  &:hover &__button {
+    display: flex;
+    justify-content: center;
+  }
 
   &__background-image {
     height: 95%;
@@ -49,20 +70,13 @@
   }
 }
 
-$layout-breakpoint-small: 800px;
-
-@media (max-width: $layout-breakpoint-small) {
+// media query for touch-devices -- hover state is not relevant
+@media only screen and (hover: none) {
   .collection-item {
-    height: 350px;
-    width: 45%;
-  }
-}
-
-$layout-breakpoint-small: 300px;
-
-@media (max-width: $layout-breakpoint-small) {
-  .collection-item {
-    height: 350px;
-    width: 90%;
+    &__button {
+      display: flex;
+      justify-content: center;
+      opacity: 0.9;
+    }
   }
 }

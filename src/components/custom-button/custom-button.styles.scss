@@ -42,6 +42,15 @@
     box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
   }
 
+  &--white {
+    border: none;
+    background-color: $white;
+    color: $black;
+    &::after {
+      background-color: $white;
+    }
+  }
+
   &--black {
     border: none;
     background-color: $black;
