@@ -2,7 +2,7 @@
 
 .cart-dropdown {
   width: 25rem;
-  height: 35rem;
+  height: 30rem;
   border: 1px solid black;
   border-radius: 5px;
   position: absolute;
@@ -20,15 +20,20 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 85%;
     overflow-y: scroll;
+  }
+
+  &__empty-message {
+    font-size: 1.8rem;
+    margin: 10% auto;
   }
 
   &__checkout-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 15%;
   }
 }
 

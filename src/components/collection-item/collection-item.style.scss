@@ -11,6 +11,11 @@
   height: 35rem;
   margin: 0.5rem;
   position: relative;
+
+  @include respond(tab-port) {
+    width: 40%;
+  }
+
   @include respond(phone) {
     width: 100%;
   }

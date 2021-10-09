@@ -1,3 +1,9 @@
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 // absolute center
 @mixin abscenter {
   position: absolute;
