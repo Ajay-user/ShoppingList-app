@@ -20,13 +20,15 @@ const CheckoutPage = ({ cartItems, cartTotal }) => {
     <div className="checkout">
       <div className="checkout__header">
         {columns.map((col_name) => (
-          <div className="checkout__heading checkout__row">{col_name}</div>
+          <div className="checkout__heading checkout__row" key={col_name}>
+            {col_name}
+          </div>
         ))}
       </div>
 
       <div className="checkout__body">
         {cartItems.map((item) => (
-          <CheckoutItem cartItem={item} />
+          <CheckoutItem cartItem={item} key={item.id} />
         ))}
       </div>
 
