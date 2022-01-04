@@ -40,3 +40,13 @@
   cursor: pointer;
   padding: 2px;
 }
+
+// styles for  galaxy - fold
+@media only screen and(max-width:280px) {
+  .checkout {
+    margin: 2.5rem 0.5rem;
+  }
+  .checkout__heading {
+    font-size: 0.9rem;
+  }
+}

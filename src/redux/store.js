@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
+import { persistStore } from "redux-persist";
 
 // middleware
 import logger from "redux-logger";
@@ -9,7 +10,8 @@ import rootReducer from "./root-reducer";
 const middleware = [logger];
 
 // we create the store using root-reducer and middleware
-const store = createStore(rootReducer, applyMiddleware(...middleware));
-
-export default store;
+export const store = createStore(rootReducer, applyMiddleware(...middleware));
 // we give this store to the Provider which encompass the app
+
+export const persistore = persistStore(store);
+// we give the persistor to the persistGate , which wraps our app
